@@ -14,6 +14,9 @@
                 <el-form-item label="登录密码：" prop="password">
                     <el-input v-model.trim="formData.password"></el-input>
                 </el-form-item>
+                <el-form-item label="邮箱：" prop="email">
+                      <el-input v-model.trim="formData.email" clearable></el-input>
+                </el-form-item>
                 <!--<el-form-item label="排序：" prop="sort">-->
                     <!--<el-input-number v-model="formData.sort" :min="1" :max="999999"></el-input-number>-->
                 <!--</el-form-item>-->
@@ -28,6 +31,7 @@
                             :props="{label:'name',value: 'id'}"
                             style="width: 100%" placeholder="请选择" />
                 </el-form-item>
+
                 <el-form-item label="状态：" prop="is_active">
                     <el-switch
                         v-model="formData.is_active"
@@ -62,6 +66,7 @@
                     name:'',
                     username:'',
                     password:'123456',
+                    email:'',
                     dept:'',
                     role:[],
                     is_active:true
@@ -73,9 +78,9 @@
                     role: [
                         {required: true, message: '请选择角色',trigger: 'blur'}
                     ],
-                    // dept: [
-                    //     {required: true, message: '请选择部门',trigger: 'blur'}
-                    // ],
+                    dept: [
+                        {required: true, message: '请选择部门',trigger: 'blur'}
+                    ],
                     username: [
                         {required: true, message: '请输入管理员用户名',trigger: 'blur'}
                     ],

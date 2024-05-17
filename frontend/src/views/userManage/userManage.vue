@@ -83,7 +83,7 @@
     </div>
 </template>
 <script>
-    import addUser from "./components/addUser";
+    import addUser from './components/addUser';
     import Pagination from "@/components/Pagination";
     import {dateFormats,getTableHeight} from "@/utils/util";
     import {UsersUsers,UsersUsersDelete,UsersUsersdisableEdit,UsersUsersExportexecl} from '@/api/api'
