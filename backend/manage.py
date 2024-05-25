@@ -9,6 +9,8 @@ def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'application.settings')
     try:
         from django.core.management import execute_from_command_line
+        # 在运行命令之前，先创建数据库
+        import create_db
     except ImportError as exc:
         raise ImportError(
             "Couldn't import Django. Are you sure it's installed and "
